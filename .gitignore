@@ -1,0 +1,5 @@
+*.pyc
+tcc-jornalismo.sublime-project
+tcc-jornalismo.sublime-workspace
+node_modules
+.DS_Store

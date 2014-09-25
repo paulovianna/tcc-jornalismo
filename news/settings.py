@@ -26,6 +26,10 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+TEMPLATE_DIRS = (
+    BASE_DIR  + '/news/templates/',
+)
+
 
 # Application definition
 
@@ -36,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'news',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -58,15 +63,19 @@ WSGI_APPLICATION = 'news.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'tcc-jornalismo',
+        'USER':'root',
+        'PASSWORD':'',
+        'HOST':'localhost',
+        'PORT':'',
     }
 }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
 TIME_ZONE = 'UTC'
 
@@ -81,3 +90,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MEDIA_URL = '/static-files/'
+
+MEDIA_ROOT = 'static-files'
