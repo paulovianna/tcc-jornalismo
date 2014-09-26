@@ -2,12 +2,13 @@
 from django.db import models
 from django.utils.translation import ugettext as _
 from thumbs import ImageWithThumbsField
+from redactor.fields import RedactorField
 
 
 class Noticia(models.Model):
     
     titulo = models.CharField('Título', max_length=128)
-    conteudo = models.TextField('Conteúdo')
+    conteudo = RedactorField(verbose_name=u'Conteúdo',allow_file_upload=False,allow_image_upload=False)
     data = models.DateField(auto_now_add=True)
 
     class Meta:
