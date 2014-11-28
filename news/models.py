@@ -17,7 +17,7 @@ class Noticia(models.Model):
     
     titulo = models.CharField('Título', max_length=128)
     conteudo = RedactorField(verbose_name=u'Conteúdo',allow_file_upload=False,allow_image_upload=False)
-    categoria = models.CharField(max_length=16, choices=CATEGORIAS)
+    categoria = models.CharField(max_length=32, choices=CATEGORIAS)
     data = models.DateField(auto_now_add=True)
 
     class Meta:
