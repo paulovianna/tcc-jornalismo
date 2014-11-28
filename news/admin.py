@@ -8,5 +8,6 @@ class ImagemInline(admin.TabularInline):
 
 class NoticiaAdmin(admin.ModelAdmin):
     inlines = [ImagemInline]
+    list_display = ('titulo', 'categoria')
 
 admin.site.register(Noticia,NoticiaAdmin)

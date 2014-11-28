@@ -6,9 +6,18 @@ from redactor.fields import RedactorField
 
 
 class Noticia(models.Model):
+
+    CATEGORIAS = (
+        ('politicas-publicas', 'Políticas Públicas'),
+        ('sociedade', 'Sociedade'),
+        ('seus-deveres', 'Seus Deveres'),
+        ('poderes', 'Poderes'),
+        ('atualidades', 'Atualidades'),
+    )
     
     titulo = models.CharField('Título', max_length=128)
     conteudo = RedactorField(verbose_name=u'Conteúdo',allow_file_upload=False,allow_image_upload=False)
+    categoria = models.CharField(max_length=16, choices=CATEGORIAS)
     data = models.DateField(auto_now_add=True)
 
     class Meta:

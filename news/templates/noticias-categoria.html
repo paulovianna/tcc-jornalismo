@@ -17,12 +17,11 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <h2>Notícias</h2>
+                <h2>{{ cat }}</h2>
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th class="col-lg-7">Notícia</th>
-                            <th class="col-lg-2">Categoria</th>
+                            <th class="col-lg-9">Notícia</th>
                             <th class="col-lg-3">Data</th>
                         </tr>
                     </thead>
@@ -30,7 +29,6 @@
                     {% for noticia in noticias %}
                         <tr>
                             <td><a href="/noticia/{{ noticia.id }}">{{ noticia.titulo }}</a></td>
-                            <td>{{ noticia.categoria }}</td>
                             <td>{{ noticia.data }}</td>
                         </tr>
                     {% endfor %}
