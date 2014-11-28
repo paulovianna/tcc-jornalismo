@@ -7,11 +7,11 @@ def home(request):
     noticias = Noticia.objects.all()
 
     for n in noticias:
-        if(n.categoria == 'politicas-publicas'):
+        if(n.categoria == 'politicas'):
             n.categoria = 'Políticas Públicas'
         if(n.categoria == 'sociedade'):
             n.categoria = 'Sociedade'
-        if(n.categoria == 'seus-deveres'):
+        if(n.categoria == 'deveres'):
             n.categoria = 'Seus Deveres'
         if(n.categoria == 'poderes'):
             n.categoria = 'Poderes'
@@ -32,11 +32,11 @@ def noticias_categoria(request,categoria):
     
     cat = 'Sem Categoria'
 
-    if(categoria == 'politicas-publicas'):
+    if(categoria == 'politicas'):
         cat = 'Políticas Públicas'
     if(categoria == 'sociedade'):
         cat = 'Sociedade'
-    if(categoria == 'seus-deveres'):
+    if(categoria == 'deveres'):
         cat = 'Seus Deveres'
     if(categoria == 'poderes'):
         cat = 'Poderes'

@@ -8,9 +8,9 @@ from redactor.fields import RedactorField
 class Noticia(models.Model):
 
     CATEGORIAS = (
-        ('politicas-publicas', 'Políticas Públicas'),
+        ('politicas', 'Políticas Públicas'),
         ('sociedade', 'Sociedade'),
-        ('seus-deveres', 'Seus Deveres'),
+        ('deveres', 'Seus Deveres'),
         ('poderes', 'Poderes'),
         ('atualidades', 'Atualidades'),
     )
